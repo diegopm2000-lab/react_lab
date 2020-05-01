@@ -1,1 +1,3 @@
-react_lab
+# Laboratory of React
+
+Main Laboratory of React
