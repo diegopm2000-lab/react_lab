@@ -21,11 +21,11 @@ test('CityList renders', async () => {
 test('CityList click on item', async () => {
     const fnClickOnItem = jest.fn()
 
-    const { findAllByRole } = render(<CityList cities={cities} onClick={fnClickOnItem}/>)
+    const { findAllByRole } = render(<CityList cities={cities} onClickCity={fnClickOnItem}/>)
 
     const items = await findAllByRole('listitem')
 
     fireEvent.click(items[0])
 
-    expect(fnClickOnItem).toHaveCalledTimes(1)
+    expect(fnClickOnItem).toHaveBeenCalledTimes(1)
 })
